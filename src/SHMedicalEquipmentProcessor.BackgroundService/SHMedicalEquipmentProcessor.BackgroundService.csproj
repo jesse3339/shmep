@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-SHMedicalEquipmentProcessor-b634c88c-50a3-4053-a60b-5b2d8c42f8f0</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SHMedicalEquipmentProcessor.Application\SHMedicalEquipmentProcessor.Application.csproj" />
+      <ProjectReference Include="..\SHMedicalEquipmentProcessor.Infrastructure\SHMedicalEquipmentProcessor.Infrastructure.csproj" />
+    </ItemGroup>
+</Project>

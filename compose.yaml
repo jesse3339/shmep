@@ -1,0 +1,6 @@
+﻿services:
+  shmedicalequipmentprocessor:
+    image: shmedicalequipmentprocessor
+    build:
+      context: .
+      dockerfile: SHMedicalEquipmentProcessor/Dockerfile
