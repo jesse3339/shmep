@@ -18,6 +18,11 @@ If sticking with a hosted background service, having a queue of incoming order u
 
 We could also use an Azure Function or AWS Lambda on a queue and trigger a one time run of the processor when an order update comes through. Alternatively, we could use webhooks, or add an endpoint to this application, exposing it to the web, and only trigger when orders need to be processed.
 
+The decision for which architectural pattern to use totally depends on a few different factors, such as:
+- Ownership of external APIs (to modify for pub/sub)
+- Expected load of the service (to determine whether serverless will be cost-effective)
+- Throughput of orders (to determine needed scale/capacity, as polling proves to be problematic, really at any point where we need more than one instance of the processor running, and other reasons)
+
 ## Other Considerations
 - Persistent tracking/logging of orders in a database
 - Using a client generator, such as Microsoft.Kiota, to generate tailored http clients for the endpoints we are calling. This saves times and ensures the OpenApi specification matches data models we use.
