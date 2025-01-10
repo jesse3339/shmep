@@ -11,4 +11,12 @@
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Common\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SHMedicalEquipmentProcessor.Domain\SHMedicalEquipmentProcessor.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

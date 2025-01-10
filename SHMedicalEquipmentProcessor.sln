@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHMedicalEquipmentProcessor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHMedicalEquipmentProcessor.Infrastructure", "src\SHMedicalEquipmentProcessor.Infrastructure\SHMedicalEquipmentProcessor.Infrastructure.csproj", "{42613099-0F8A-4695-9B7B-1908623150AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHMedicalEquipmentProcessor.Domain", "src\SHMedicalEquipmentProcessor.Domain\SHMedicalEquipmentProcessor.Domain.csproj", "{69B50BBC-6974-41C4-8B31-0C85F899B1E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHMedicalEquipmentProcessor.UnitTests", "SHMedicalEquipmentProcessor.UnitTests\SHMedicalEquipmentProcessor.UnitTests.csproj", "{FB630E97-9039-449D-9DF9-15713E2DBAE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +35,19 @@ Global
 		{42613099-0F8A-4695-9B7B-1908623150AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42613099-0F8A-4695-9B7B-1908623150AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42613099-0F8A-4695-9B7B-1908623150AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B50BBC-6974-41C4-8B31-0C85F899B1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B50BBC-6974-41C4-8B31-0C85F899B1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B50BBC-6974-41C4-8B31-0C85F899B1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B50BBC-6974-41C4-8B31-0C85F899B1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB630E97-9039-449D-9DF9-15713E2DBAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB630E97-9039-449D-9DF9-15713E2DBAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB630E97-9039-449D-9DF9-15713E2DBAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB630E97-9039-449D-9DF9-15713E2DBAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{69B50BBC-6974-41C4-8B31-0C85F899B1E0} = {250BE119-95B2-4014-8010-B6A37D966126}
+		{A50BD9AE-847C-4883-8721-21C127E1108A} = {250BE119-95B2-4014-8010-B6A37D966126}
+		{8D067C7D-9134-442E-8ECE-1C0EC2D841F9} = {250BE119-95B2-4014-8010-B6A37D966126}
+		{42613099-0F8A-4695-9B7B-1908623150AB} = {250BE119-95B2-4014-8010-B6A37D966126}
 	EndGlobalSection
 EndGlobal
