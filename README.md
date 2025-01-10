@@ -8,6 +8,8 @@ Listed below are some production changes I would implement if we were to roll ou
 
 # Production Changes
 
+Listed below are suggestions or recommendations for production use.
+
 ## Retries on API failures
 To increase reliability of this service, we would need a more graceful way to handle failed requests. A retry mechanism using a package like Polly would be suitable for this.
 
