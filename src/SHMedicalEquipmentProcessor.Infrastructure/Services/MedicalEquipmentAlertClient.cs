@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Json;
 using Microsoft.Extensions.Logging;
-using SHMedicalEquipmentProcessor.Application.Interfaces;
+using SHMedicalEquipmentProcessor.Application.Common.Interfaces;
 
 namespace SHMedicalEquipmentProcessor.Infrastructure.Services;
 

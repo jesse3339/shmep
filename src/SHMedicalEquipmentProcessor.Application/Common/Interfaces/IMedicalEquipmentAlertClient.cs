@@ -1,4 +1,4 @@
-﻿namespace SHMedicalEquipmentProcessor.Application.Interfaces;
+﻿namespace SHMedicalEquipmentProcessor.Application.Common.Interfaces;
 
 public interface IMedicalEquipmentAlertClient
 {

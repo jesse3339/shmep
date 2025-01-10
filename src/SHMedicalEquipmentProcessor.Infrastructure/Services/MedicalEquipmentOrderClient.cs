@@ -1,7 +1,8 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using SHMedicalEquipmentProcessor.Application.Interfaces;
+using SHMedicalEquipmentProcessor.Application.Common.Interfaces;
+using SHMedicalEquipmentProcessor.Domain.Entities;
 
 namespace SHMedicalEquipmentProcessor.Infrastructure.Services;
 
@@ -10,7 +11,7 @@ public class MedicalEquipmentOrderClient(
     ILogger<MedicalEquipmentOrderClient> logger
     ) : IMedicalEquipmentOrderClient
 {
-    public async Task<JsonDocument?> GetMedicalEquipmentOrdersAsync()
+    public async Task<List<Order>?> GetMedicalEquipmentOrdersAsync()
     {
         var response = await httpClient.GetAsync("/orders");
 
@@ -20,8 +21,7 @@ public class MedicalEquipmentOrderClient(
             return null;
         }
         
-        // could deserialize into a c# object based on openapi spec if available using ReadFromJsonAsync
-        var json = await response.Content.ReadAsStringAsync();
-        return JsonDocument.Parse(json);
+        var orders = await response.Content.ReadFromJsonAsync<List<Order>>();
+        return orders;
     }
 }

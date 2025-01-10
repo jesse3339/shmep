@@ -1,7 +1,8 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using SHMedicalEquipmentProcessor.Application.Interfaces;
+using SHMedicalEquipmentProcessor.Application.Common.Interfaces;
+using SHMedicalEquipmentProcessor.Domain.Entities;
 
 namespace SHMedicalEquipmentProcessor.Infrastructure.Services;
 
@@ -10,13 +11,16 @@ public class MedicalOrderUpdateClient(
     ILogger<MedicalOrderUpdateClient> logger
     ) : IMedicalOrderUpdateClient
 {
-    public async Task UpdateOrderAsync(JsonDocument order)
+    public async Task<bool> UpdateOrderAsync(Order order)
     {
+        // this would likely be a PUT request rather than a post
         var response = await httpClient.PostAsJsonAsync("/update", order);
 
-        if (!response.IsSuccessStatusCode)
+        if (response.IsSuccessStatusCode)
         {
-            logger.LogError("Error while updating order {}", order.RootElement.GetProperty("OrderId").GetString());
+            return true;
         }
+        logger.LogError("Error while updating order {OrderId}", order.OrderId.ToString());
+        return false;
     }
 }
