@@ -27,3 +27,4 @@ The decision for which architectural pattern to use totally depends on a few dif
 - Persistent tracking/logging of orders in a database
 - Using a client generator, such as Microsoft.Kiota, to generate tailored http clients for the endpoints we are calling. This saves times and ensures the OpenApi specification matches data models we use.
 - Integration testing with live endpoints.
+- CI/CD with a container registry and pipeline to deploy depending on the VCS and deployment strategy/environment being used.
